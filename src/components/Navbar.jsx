@@ -2,7 +2,7 @@ export const Navbar = () => {
   return (
     <nav className="navbar navbar-dark bg-dark navbar-expand-lg py-3">
       <div className="container-fluid">
-        <span className="navbar-brand">
+        <span className="navbar-brand logo-font">
           <a className="nav-link mx-3" href="#top">
             Wai Ian
           </a>

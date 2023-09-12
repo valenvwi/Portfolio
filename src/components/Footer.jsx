@@ -11,8 +11,7 @@ export const Footer = () => {
       <img src={footerImg} alt="footer-wave" className="footer-img" />
       <div className="footer row px-2">
         <div className="col-sm-12 col-md-4 ">
-          <h5>Wai Ian Vong</h5>
-          <p>📧 valenvwi@gmail.com</p>
+          <h5 className="logo-font">Wai Ian</h5>
         </div>
         <div className="col-sm-12 col-md-4 d-flex align-items-center justify-content-center">
           <p>This portfolio is made with React in Sep 2023.</p>
