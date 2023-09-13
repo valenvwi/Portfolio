@@ -7,7 +7,18 @@ export const Banner = () => {
 
   function handleLike(e) {
     setLikeCount(likeCount + 1);
-    e.target.innerHTML = "One more please!";
+    if (likeCount === 0) {
+    e.target.innerHTML = "One more please!";}
+    else {
+      e.target.innerHTML = "Thanks a lot!";
+    }
+    e.target.classList.add("bump");
+    const timer = setTimeout(() => {
+      e.target.classList.remove("bump");
+    }, 300);
+    return () => {
+      clearTimeout(timer);
+    };
   }
 
   return (
