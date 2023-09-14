@@ -22,11 +22,6 @@ li {
   width: 40px;
 }
 
-.tech-icon-big-margin {
-  margin-top: 13px;
-  margin-right: 5px;
-}
-
 .project-card-img {
   height: 300px;
   width: 300px;
@@ -37,17 +32,17 @@ li {
   padding: 30px;
   margin-bottom: 30px;
   border-radius: 10px;
-  position: relative;
+  /* position: relative; */
 }
 
 .project-card.left {
-  transform: translateX(-100px);
+  transform: translateX(20px);
   opacity: 0;
   transition: 1s all ease;
 }
 
 .project-card.right {
-  transform: translateX(100px);
+  transform: translateX(-20px);
   opacity: 0;
   transition: 1s all ease;
 }
