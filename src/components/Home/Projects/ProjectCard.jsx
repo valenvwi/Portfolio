@@ -79,9 +79,9 @@ export const ProjectCard = () => {
 
   return (
     <div className="d-lg-block">
-      <div className="row project-card left border shadow-lg">
+      <div className="row project-card border shadow-lg">
         <div className="col-sm-12 col-md-8 container d-flex justify-content-center align-items-center">
-          <div className="ml-2">
+          <div>
             <h1>InstaExplore</h1>
             <p className="lead">
               InstaExplore is a mobile application designed to help newcomers
@@ -113,13 +113,13 @@ export const ProjectCard = () => {
         </div>
       </div>
 
-      <div className="row project-card right border shadow-lg">
+      <div className="row project-card border shadow-lg">
         <div className="d-none d-lg-block col-lg-4 text-center py-2">
           <img src={starry} alt="InstaExplore" className="card-image"></img>
         </div>
 
         <div className="col-sm-12 col-md-8 container d-flex justify-content-center align-items-center">
-          <div className="ml-2">
+          <div>
             <h1>Starry Accessory</h1>
             <p className="lead">
               Starry Accessory is an online earrings shop that offers a
@@ -146,9 +146,9 @@ export const ProjectCard = () => {
         </div>
       </div>
 
-      <div className="row project-card left border shadow-lg">
+      <div className="row project-card border shadow-lg">
         <div className="col-sm-12 col-md-8 container d-flex justify-content-center align-items-center">
-          <div className="ml-2">
+          <div>
             <h1>QuickDrop</h1>
             <p className="lead">
               Sending or receiving packages can be a hassle in today's

@@ -32,23 +32,14 @@ li {
   padding: 30px;
   margin-bottom: 30px;
   border-radius: 10px;
-  /* position: relative; */
-}
-
-.project-card.left {
-  transform: translateX(20px);
-  opacity: 0;
-  transition: 1s all ease;
-}
-
-.project-card.right {
-  transform: translateX(-20px);
+  position: relative;
+  transform: translateY(20px);
   opacity: 0;
   transition: 1s all ease;
 }
 
 .project-card.active {
-  transform: translateY(0);
+  transform: translateX(0);
   opacity: 1;
 }
 
