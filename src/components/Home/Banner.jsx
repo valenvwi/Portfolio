@@ -8,9 +8,9 @@ export const Banner = () => {
   function handleLike(e) {
     setLikeCount(likeCount + 1);
     if (likeCount === 0) {
-    e.target.innerHTML = "One more please!";}
-    else {
-      e.target.innerHTML = "Thanks a lot!";
+      e.target.innerText = "One more please!";
+    } else {
+      e.target.innerText = "Thanks a lot!";
     }
     e.target.classList.add("bump");
     const timer = setTimeout(() => {

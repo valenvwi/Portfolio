@@ -2,6 +2,7 @@ import starry from "../../../assets/images/starry.png";
 import { ProjectTechIcons } from "./ProjectTechIcons";
 import { ProjectButton } from "./ProjectButton";
 import { ProjectCardImage } from "./ProjectCardImage";
+import { useEffect } from "react";
 
 const firstIcons = [
   "https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg",
@@ -60,11 +61,13 @@ const images = [
 
 export const ProjectCard = () => {
   function showCard() {
+    console.log("scrolling");
     const cards = document.querySelectorAll(".project-card");
 
     for (let i = 0; i < cards.length; i++) {
       const windowHeight = window.innerHeight;
       const elementTop = cards[i].getBoundingClientRect().top;
+      //information about the size of an element and its position relative to the viewport.
       const elementVisible = 150;
 
       if (elementTop < windowHeight - elementVisible) {
@@ -75,7 +78,9 @@ export const ProjectCard = () => {
     }
   }
 
-  window.addEventListener("scroll", showCard);
+  useEffect(() => {
+    window.addEventListener("scroll", showCard);
+  }, []);
 
   return (
     <div className="d-lg-block">
@@ -95,7 +100,7 @@ export const ProjectCard = () => {
             <div className="row">
               <div className="col-sm-12 col-lg-8 mb-3">
                 {firstIcons.map((icon) => (
-                  <ProjectTechIcons key={Math.random()} icon={icon} />
+                  <ProjectTechIcons key={icon} icon={icon} />
                 ))}
               </div>
               <div className="col-sm-12 col-lg-4 my-3 text-center">
@@ -132,7 +137,7 @@ export const ProjectCard = () => {
             <div className="row">
               <div className="col-sm-12 col-lg-8 mb-3">
                 {secondIcons.map((icon) => (
-                  <ProjectTechIcons key={Math.random()} icon={icon} />
+                  <ProjectTechIcons key={icon} icon={icon} />
                 ))}
               </div>
               <div className="col-sm-12 col-lg-4 my-3 text-center">
@@ -164,7 +169,7 @@ export const ProjectCard = () => {
             <div className="row">
               <div className="col-sm-12 col-lg-8 mb-3">
                 {thirdIcons.map((icon) => (
-                  <ProjectTechIcons key={Math.random()} icon={icon} />
+                  <ProjectTechIcons key={icon} icon={icon} />
                 ))}
               </div>
               <div className="col-sm-12 col-lg-4 my-3 text-center">
