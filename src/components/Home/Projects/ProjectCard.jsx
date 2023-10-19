@@ -1,4 +1,5 @@
 import starry from "../../../assets/images/starry.png";
+import chatgpt from "../../../assets/images/chatgpt.jpg";
 import { ProjectTechIcons } from "./ProjectTechIcons";
 import { ProjectButton } from "./ProjectButton";
 import { ProjectCardImage } from "./ProjectCardImage";
@@ -16,12 +17,11 @@ const firstIcons = [
 ];
 
 const secondIcons = [
-  "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
-  "https://www.vectorlogo.zone/logos/springio/springio-icon.svg",
+  "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+  "https://cdn.worldvectorlogo.com/logos/django.svg",
   "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
-  "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg",
   "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
-  "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
+  "https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg",
 ];
 
 const thirdIcons = [
@@ -33,17 +33,31 @@ const thirdIcons = [
   "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg",
 ];
 
+
+const fourthIcons = [
+  "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+  "https://www.vectorlogo.zone/logos/springio/springio-icon.svg",
+  "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+  "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg",
+  "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+  "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
+];
+
 const buttons = [
   {
     href: "https://instaexplore-9b589f2c49e0.herokuapp.com/users/sign_in",
     title: "Explore now",
   },
   {
-    href: "https://github.com/valenvwi/Starry-Accessory-React",
+    href: "https://github.com/valenvwi/Chatgpt-py",
     title: "View code",
   },
   {
     href: "https://github.com/valenvwi/QuickDrop-Amy",
+    title: "View code",
+  },
+  {
+    href: "https://github.com/valenvwi/Starry-Accessory-React",
     title: "View code",
   },
 ];
@@ -61,13 +75,11 @@ const images = [
 
 export const ProjectCard = () => {
   function showCard() {
-    console.log("scrolling");
     const cards = document.querySelectorAll(".project-card");
 
     for (let i = 0; i < cards.length; i++) {
       const windowHeight = window.innerHeight;
       const elementTop = cards[i].getBoundingClientRect().top;
-      //information about the size of an element and its position relative to the viewport.
       const elementVisible = 150;
 
       if (elementTop < windowHeight - elementVisible) {
@@ -120,18 +132,14 @@ export const ProjectCard = () => {
 
       <div className="row project-card border shadow-lg">
         <div className="d-none d-lg-block col-lg-4 text-center py-2">
-          <img src={starry} alt="InstaExplore" className="card-image"></img>
+          <img src={chatgpt} alt="Chatgpt-clone" className="card-image"></img>
         </div>
 
         <div className="col-sm-12 col-md-8 container d-flex justify-content-center align-items-center">
           <div>
-            <h1>Starry Accessory</h1>
+            <h1>ChatGPT Clone</h1>
             <p className="lead">
-              Starry Accessory is an online earrings shop that offers a
-              straightforward shopping experience. Visitors can freely browse a
-              variety of products. Upon logging in, users gain the ability to
-              add items to their cart, proceed with the checkout process, and
-              conveniently track their order history.
+            This platform offers secure communication with enforced user authentication. Users can engage in conversations with an AI assistant in the chatroom, while also having the ability to access and review their chat histories. It is a safe and feature-rich environment for interactive discussions and seamless AI-powered interactions.
             </p>
             <h5>Tech-Stack</h5>
             <div className="row">
@@ -186,6 +194,40 @@ export const ProjectCard = () => {
           <ProjectCardImage href={images[1].href} title={images[1].title} />
         </div>
       </div>
+
+      <div className="row project-card border shadow-lg">
+        <div className="d-none d-lg-block col-lg-4 text-center py-2">
+          <img src={starry} alt="InstaExplore" className="card-image"></img>
+        </div>
+
+        <div className="col-sm-12 col-md-8 container d-flex justify-content-center align-items-center">
+          <div>
+            <h1>Starry Accessory</h1>
+            <p className="lead">
+              Starry Accessory is an online earrings shop that offers a
+              straightforward shopping experience. Visitors can freely browse a
+              variety of products. Upon logging in, users gain the ability to
+              add items to their cart, proceed with the checkout process, and
+              conveniently track their order history.
+            </p>
+            <h5>Tech-Stack</h5>
+            <div className="row">
+              <div className="col-sm-12 col-lg-8 mb-3">
+                {fourthIcons.map((icon) => (
+                  <ProjectTechIcons key={icon} icon={icon} />
+                ))}
+              </div>
+              <div className="col-sm-12 col-lg-4 my-3 text-center">
+                <ProjectButton
+                  website={buttons[3].href}
+                  title={buttons[3].title}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 };
