@@ -1,4 +1,4 @@
-import footerImg from "../assets/images/footer-wave.png";
+import footerImg from "../../assets/images/footer-wave.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";

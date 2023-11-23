@@ -1,9 +1,18 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { motion, useAnimate } from "framer-motion";
 
 export const Banner = () => {
   const [likeCount, setLikeCount] = useState(0);
+  const [scope, animate] = useAnimate();
+
+  useEffect(() => {
+    if (likeCount === 0) {
+      return;
+    }
+    animate(scope.current, { scale: [1.2, 1] });
+  }, [likeCount, scope, animate]);
 
   function handleLike(e) {
     setLikeCount(likeCount + 1);
@@ -12,13 +21,6 @@ export const Banner = () => {
     } else {
       e.target.innerText = "Thanks a lot!";
     }
-    e.target.classList.add("bump");
-    const timer = setTimeout(() => {
-      e.target.classList.remove("bump");
-    }, 300);
-    return () => {
-      clearTimeout(timer);
-    };
   }
 
   return (
@@ -26,20 +28,26 @@ export const Banner = () => {
       <h1> Hi! My name is Wai Ian. </h1>
       <h3> I am a junior software developer.</h3>
       <div className="d-flex align-items-center position-relative">
-        <a type="button" className="button p-3 mx-3" onClick={handleLike}>
+        <motion.button
+          className="button p-3 mx-3"
+          onClick={handleLike}
+          whileHover={{ scale: 1.05, backgroundColor: "rgb(22, 220, 235)" }}
+        >
           Give me a like!
-        </a>
+        </motion.button>
         {likeCount === 0 ? (
           <FontAwesomeIcon
             icon={faHeart}
             style={{ color: "#ffffff" }}
             className="banner-fonticon"
+            ref={scope}
           />
         ) : (
           <FontAwesomeIcon
             icon={faHeart}
             style={{ color: "#ff0000" }}
             className="banner-fonticon"
+            ref={scope}
           />
         )}
         {likeCount > 1 && <h5 className="likecount-text"> + {likeCount}</h5>}

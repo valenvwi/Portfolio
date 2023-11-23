@@ -1,10 +1,8 @@
-import starry from "../../../assets/images/starry.png";
-import chatgpt from "../../../assets/images/chatgpt.jpg";
-import multiverseChat from "../../../assets/images/multiverseChat.png";
-import quickDrop from "../../../assets/images/QuickDrop.png";
-import instaExplore from "../../../assets/images/InstaExplore.png";
-import { ProjectCardTemplate } from "./ProjectCardTemplate";
-import { useEffect } from "react";
+import starry from "../assets/images/starry.png";
+import chatgpt from "../assets/images/chatgpt.jpg";
+import multiverseChat from "../assets/images/multiverseChat.png";
+import quickDrop from "../assets/images/QuickDrop.png";
+import instaExplore from "../assets/images/InstaExplore.png";
 
 const firstnThirdIcons = [
   "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
@@ -66,7 +64,7 @@ const buttons = [
   },
 ];
 
-const projects = [
+export const projects = [
   {
     title: "Multiverse Chat",
     description:
@@ -74,7 +72,7 @@ const projects = [
     image: multiverseChat,
     icons: firstnThirdIcons,
     button: buttons[0],
-    direction: "right",
+    framework: "Django & React",
   },
   {
     title: "InstaExplore",
@@ -83,7 +81,7 @@ const projects = [
     image: instaExplore,
     icons: secondIcons,
     button: buttons[1],
-    direction: "left",
+    framework: "Ruby on Rails",
   },
   {
     title: "ChatGPT Clone",
@@ -92,7 +90,7 @@ const projects = [
     image: chatgpt,
     icons: firstnThirdIcons,
     button: buttons[2],
-    direction: "right",
+    framework: "Django & React",
   },
   {
     title: "QuickDrop",
@@ -101,7 +99,7 @@ const projects = [
     image: quickDrop,
     icons: fourthIcons,
     button: buttons[3],
-    direction: "left",
+    framework: "Ruby on Rails",
   },
   {
     title: "Starry Accessory",
@@ -110,44 +108,6 @@ const projects = [
     image: starry,
     icons: fifthIcons,
     button: buttons[4],
-    direction: "right",
+    framework: "Spring Boot & React",
   },
 ];
-
-export const ProjectCard = () => {
-  function showCard() {
-    const cards = document.querySelectorAll(".project-card");
-
-    for (let i = 0; i < cards.length; i++) {
-      const windowHeight = window.innerHeight;
-      const elementTop = cards[i].getBoundingClientRect().top;
-      const elementVisible = 150;
-
-      if (elementTop < windowHeight - elementVisible) {
-        cards[i].classList.add("active");
-      } else {
-        cards[i].classList.remove("active");
-      }
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener("scroll", showCard);
-  }, []);
-
-  return (
-    <div className="d-lg-block">
-      {projects.map((project) => (
-        <ProjectCardTemplate
-          title={project.title}
-          description={project.description}
-          image={project.image}
-          icons={project.icons}
-          button={project.button}
-          direction={project.direction}
-          key={project.title}
-        />
-      ))}
-    </div>
-  );
-};
