@@ -3,6 +3,7 @@ import chatgpt from "../assets/images/chatgpt.jpg";
 import multiverseChat from "../assets/images/multiverseChat.png";
 import quickDrop from "../assets/images/QuickDrop.png";
 import instaExplore from "../assets/images/InstaExplore.png";
+import restaurantApp from "../assets/images/restaurant-app.png";
 
 const firstnThirdIcons = [
   "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
@@ -35,12 +36,17 @@ const fourthIcons = [
 const fifthIcons = [
   "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
   "https://www.vectorlogo.zone/logos/springio/springio-icon.svg",
+  "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
   "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
   "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg",
-  "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
   "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
 ];
 
+const sixthIcons = [
+  "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+  "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+  "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg",
+];
 const buttons = [
   {
     href: "https://github.com/valenvwi/MultiverseChat",
@@ -62,6 +68,10 @@ const buttons = [
     href: "https://github.com/valenvwi/Starry-Accessory-React",
     title: "View code",
   },
+  {
+    href: "https://github.com/valenvwi/restaurant-ordering-app",
+    title: "View code",
+  },
 ];
 
 export const projects = [
@@ -72,6 +82,7 @@ export const projects = [
     image: multiverseChat,
     icons: firstnThirdIcons,
     button: buttons[0],
+    completedOn: "November 2023",
     framework: "Django & React",
   },
   {
@@ -81,6 +92,7 @@ export const projects = [
     image: instaExplore,
     icons: secondIcons,
     button: buttons[1],
+    completedOn: "July 2023",
     framework: "Ruby on Rails",
   },
   {
@@ -90,6 +102,7 @@ export const projects = [
     image: chatgpt,
     icons: firstnThirdIcons,
     button: buttons[2],
+    completedOn: "October 2023",
     framework: "Django & React",
   },
   {
@@ -99,6 +112,7 @@ export const projects = [
     image: quickDrop,
     icons: fourthIcons,
     button: buttons[3],
+    completedOn: "June 2023",
     framework: "Ruby on Rails",
   },
   {
@@ -108,6 +122,17 @@ export const projects = [
     image: starry,
     icons: fifthIcons,
     button: buttons[4],
+    completedOn: "August 2023",
     framework: "Spring Boot & React",
+  },
+  {
+    title: "Food Ordering App",
+    description:
+      "This is a tiny React app that was made in two days. This simple food ordering app allows customers to view food and drinks from a restaurant. Users can also add items to their shopping cart.",
+    image: restaurantApp,
+    icons: sixthIcons,
+    button: buttons[5],
+    completedOn: "November 2023",
+    framework: "React",
   },
 ];

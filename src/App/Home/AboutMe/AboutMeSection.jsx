@@ -3,7 +3,7 @@ import { AboutMeContent } from "./AboutMeContent";
 
 export const AboutMeSection = () => {
   return (
-    <div className="container" id="aboutMe">
+    <div className="container mb-5" id="aboutMe">
       <h1 className="m-5">About me</h1>
       <div className="d-none d-lg-block">
         <div className="row mx-5">

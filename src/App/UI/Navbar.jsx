@@ -1,6 +1,20 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export const Navbar = () => {
+
+  useEffect(() => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        const navbarCollapse = document.getElementById('navbarToggleNavDropdown');
+        if (navbarCollapse.classList.contains('show')) {
+          navbarCollapse.classList.remove('show');
+        }
+      });
+    });
+  }, []);
+
   return (
     <nav className="navbar navbar-dark bg-dark navbar-expand-lg py-3">
       <div className="container-fluid">

@@ -3,7 +3,7 @@
     url("./assets/images/lungern.jpg");
   background-size: cover;
   background-position: center;
-  height: 80vh !important;
+  height: 75vh !important;
 }
 
 .avatar {
@@ -100,10 +100,17 @@ h5 {
 
 .underline {
   position: absolute;
-  bottom: -5px;
+  bottom: -2px;
   left: 0;
   right: 0;
   height: 1px;
+  background: #49a3dfea;
+}
+
+.underline-mobile {
+  height: 1px;
+  width: 50%;
+  margin: 0 auto;
   background: #49a3dfea;
 }
 
@@ -125,4 +132,20 @@ h5 {
   user-select: none;
   min-width: 0;
   position: relative;
+}
+
+.tab-list-mobile {
+  list-style: none;
+  padding: 5px;
+  font-weight: 500;
+  user-select: none;
+  min-width: 0;
+  position: relative;
+  text-align: center;
+}
+
+#root {
+  min-height: 100vh;
+  display:flex;
+  flex-direction: column;
 }

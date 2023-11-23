@@ -8,9 +8,9 @@ export const ProjectCardTemplate = ({
   image,
   icons,
   button,
+  completedOn,
   direction,
 }) => {
-  console.log(direction);
   return (
     <AnimatePresence>
       <motion.div
@@ -29,7 +29,9 @@ export const ProjectCardTemplate = ({
         <div className="col-sm-12 col-md-8 container d-flex justify-content-center align-items-center">
           <div>
             <h1>{title}</h1>
+            <p className="lead">{completedOn}</p>
             <p className="lead">{description}</p>
+
             <h5>Tech-Stack</h5>
             <div className="row">
               <div className="col-sm-12 col-lg-8 mb-3">
