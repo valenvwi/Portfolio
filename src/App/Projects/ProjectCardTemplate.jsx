@@ -47,7 +47,7 @@ export const ProjectCardTemplate = ({
         </div>
 
         {direction === "right" && (
-          <div className="d-none d-lg-block col-lg-4 text-center py-2">
+          <div className="d-none d-lg-block col-lg-4 text-center py-2 m-auto">
             <img src={image} alt={title} className="card-image"></img>
           </div>
         )}
