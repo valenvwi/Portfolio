@@ -61,8 +61,8 @@ const buttons = [
     title: "View code",
   },
   {
-    href: "https://instaexplore-9b589f2c49e0.herokuapp.com/users/sign_in",
-    title: "Explore now",
+    href: "https://github.com/valenvwi/InstaExplore",
+    title: "View code",
   },
   {
     href: "https://github.com/valenvwi/Chatgpt-py",
